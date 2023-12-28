@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Doa Sehari-hari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1>Hapalan Doa Sehari-hari</h1>
+        <div id="output"></div>
+
+        <script type="text/javascript">
+            var data = {
+                "doa_doa": [
+                {
+        "id": "1",
+        "doa": "Doa sesudah makan",
+        "ayat": "اَلْحَمْدُ ِللهِ الَّذِىْ اَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِيْنَ",
+        "latin": "Alhamdulillahilladzi ath-amanaa wa saqoonaa wa ja'alanaa minal muslimiin.",
+        "artinya": "Segala puji bagi Allah yang telah memberi kami makan dan minum serta menjadikan kami termasuk dari kaum muslimin."
+    },
+    {
+        "id": "2",
+        "doa": "Doa ketika turun hujan",
+        "ayat": "اللَّهُمَّ صَيِّبًا نَافِعًا",
+        "latin": "Allahumma shayyiban nafi’an.",
+        "artinya": "Ya Allah, curahkanlah air hujan yang bermanfaat. (HR Bukhar dari Aisyah RA)"
+    },
+    {
+        "id": "3",
+        "doa": "Doa ketika takut bahaya hujan lebat",
+        "ayat": "اللَّهُمَّ حَوَالَيْنَا وَلاَ عَلَيْنَا ، اللَّهُمَّ عَلَى الآكَامِ وَالظِّرَابِ ، وَبُطُونِ الأَوْدِيَةِ ، وَمَنَابِتِ الشَّجَرِ",
+        "latin": "Allahumma hawalaina wala ‘alaina. Allahumma ‘alal akami wa adhirabi, wa buthunil auwdiyati, wamanabitisyajari.",
+        "artinya": "Ya Allah turunkan hujan ini di sekitar kami jangan di atas kami. Ya Allah curahkanlah hujan ini di atas bukit-bukit, di hutan-hutan lebat, di gunung-gunung kecil, di lembah-lembah, dan tempat-tempat tumbuhnya pepohonan. (HR Bukhari Muslim)"
+    },
+    {
+        "id": "4",
+        "doa": "Doa setelah turun hujan",
+        "ayat": "مُطِرْنَا بِفَضْلِ اللـهِ ورَحْمَتِهِ",
+        "latin": "Muthirnaa bifadhlillahi wa rahmatihi.",
+        "artinya": "Diturunkan kepada kami hujan berkat anugerah Allah dan rahmat-Nya. (HR Bukhari)"
+    },
+    {
+        "id": "5",
+        "doa": "Doa bertemu binatang buas",
+        "ayat": "إِنَّهُۥ مِن سُلَيْمَٰنَ وَإِنَّهُۥ بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+        "latin": "Innahụ min sulaimāna wa innahụ bismillāhir-raḥmānir-raḥīm",
+        "artinya": "Sesungguhnya surat itu, dari SuIaiman dan sesungguhnya (isi)nya: Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang. (Qs. An Naml: 30 )"
+    },
+    {
+        "id": "6",
+        "doa": "Doa agar selalu dicukupkan rezeki",
+        "ayat": "اَللّٰهُمَّ اَكْفِنِيْ بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِيْ بِفَضْلِكَ عَمَّنْ سِوَاكَ",
+        "latin": "Allahummakfini bihalalika ‘an haramik wa aghnini bifadhlika amman siwak",
+        "artinya": "Ya Allah, berilah aku kecukupan dengan rezeki yang halal, sehingga aku tidak memerlukan yang haram, dan berilah aku kekayaan dengan karuniamu, sehingga aku tidak memerlukan bantuan orang lain, selain diri-mu. (HR. Ahmad)"
+    },
+                ]
+            };
+
+            var doaDoaList = data.doa_doa;
+            var output = document.getElementById('output');
+
+            // Berfungsi untuk membuat elemen dan menampilkan data doa-doa dalam tabel
+            function displayDoaDoa() {
+                var html = '<table class="table table-bordered"><thead><tr><th>ID</th><th>Doa</th><th>Ayat</th><th>Latin</th><th>Artinya</th></tr></thead><tbody>';
+                doaDoaList.forEach(function(doa) {
+                    html += '<tr><td>' + doa.id + '</td><td>' + doa.doa + '</td><td>' + doa.ayat + '</td><td>' + doa.latin + '</td><td>' + doa.artinya + '</td></tr>';
+                });
+                html += '</tbody></table>';
+                output.innerHTML = html;
+            }
+
+            // Memanggil fungsi untuk menampilkan data doa-doa
+            displayDoaDoa();
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@

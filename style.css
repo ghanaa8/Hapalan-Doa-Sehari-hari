@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* Style the table header */
+  th {
+    background-color: #9ad3bc; /* Warna header */
+    color: #333; /* Warna teks header */
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Style alternating rows in the table */
+  tr:nth-child(even) {
+    background-color: #f8f8f8; /* Warna latar baris genap */
+  }
+  
+  /* Style odd rows in the table */
+  tr:nth-child(odd) {
+    background-color: #e0f2f1; /* Warna latar baris ganjil */
+  }
+  
+  /* Style table cells */
+  td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Warna garis antar sel */
+  }
+  
+  /* Hover effect for table rows */
+  tr:hover {
+    background-color: #d0e8e6; /* Warna latar saat hover */
+  }
